@@ -5,3 +5,55 @@
     --color-heading: #1b0760;
     --color-body: #918ca4;
 }
+
+html{
+    /* 62.5% of 16px = 10px */
+    /* font-size: 16px; No need to write this */
+     font-size: 62.5 %;
+}
+
+body{
+
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+    line-height: 1.5;
+    /* The above lines means 1.5 times the current font size */
+    font-size: 2.4rem;
+}
+
+h1,h2,h3{
+
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+    /* The above line is for the bottom margin of each of the paragraph and heading tags  */
+}
+
+h1{
+    /* 1 * font size of the HTML element */
+    font-size: 7rem; 
+    /* 70px = 7 rem and 40 px = 4rem , this is the magic of mentioning 62.5% of html element */
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024){
+
+    body{
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 8rem;
+    }
+
+    h3{
+        font-size: 2.4rem;
+    }
+}
