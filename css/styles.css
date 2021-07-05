@@ -6,10 +6,12 @@
     --color-body: #918ca4;
 }
 
+/* Typography */
+
 html{
     /* 62.5% of 16px = 10px */
     /* font-size: 16px; No need to write this */
-     font-size: 62.5 %;
+     font-size: 62.5%;
 }
 
 body{
@@ -57,3 +59,45 @@ h3{
         font-size: 2.4rem;
     }
 }
+
+/* Links  */
+
+a{
+    text-decoration: none;
+    /* it's for all anchor tags in the webpage so there is no need to repeat it for other elements
+    in the webpage
+    */
+}
+
+.link-arrow{
+
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* We also need arrow sign after the Learn more text so that we use the sudo elements selector */
+
+.link-arrow::after{
+
+    content: '-->';
+    margin-left: 5px; 
+    /* margin value in pixles because no matter what we always wants distance b/w arrow and Learn 
+    more text should always be fixed */
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after{
+
+    margin-left: 10px;
+
+}
+@media screen and (min-width: 1024px)
+{
+  .link-arrow{
+      font-size: 1.5rem; 
+  }
+}
+
+
