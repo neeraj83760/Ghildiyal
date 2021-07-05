@@ -100,4 +100,46 @@ a{
   }
 }
 
+/* Badges */
 
+.badge{
+       /*This prevent the badge wrapping into second line this is particularly
+       font-size: 2rem;
+       important when we've limited space  */
+      /* For vertical and horizontal padding */
+      /* No dependecy of the radius on font size that's why size is in pixels */
+      border-radius: 20px;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+      white-space: nowrap;
+}
+
+.badge--primary{
+
+    background: var(--color-primary);
+    color: white;
+}
+
+.badge--secondary{
+    background-color: var(--color-secondary);
+    color:white;
+}
+
+.badge--small{
+
+    font-size: 1.6rem;
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .badge{
+
+        font-size: 1.5rem;
+    }
+
+    .badge--small{
+
+        font-size: 1.2rem;
+    }
+}
