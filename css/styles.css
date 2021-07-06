@@ -448,3 +448,26 @@ a{
         font-size: 1.6rem; 
     }
 }
+
+/* Media */
+
+.media{
+
+    display: flex; 
+}
+
+.media__title{
+
+    margin-top: 0; 
+    /* margin-bottom: 0; */
+}
+.media__body{
+
+    margin: 0 2rem; 
+    /* 0 for vertical and 2rem for horizontal */
+}
+.media__image{
+
+    margin-top: 1rem;
+}
+
