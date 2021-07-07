@@ -667,3 +667,50 @@ padding: 3rem;
     }
 
 }
+
+/*  Collapsibles  */
+
+.collapsible__header{
+
+   display: flex;
+   justify-content: space-between;
+}
+.collapsible_heading{
+
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron{
+
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content{
+
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s; 
+    /* to animate multiple properties we use all keyword */
+}
+
+/*  the below mentioned styling means when the collapsible expanded the
+    collapsible chevron will points downwards  
+*/
+
+.collapsible--expanded .collapsible__chevron{
+
+ transform: rotate(0deg);
+
+}
+
+.collapsible--expanded .collapsible__content{
+
+    /* display: block; */
+    max-height: 100vh;
+    opacity:1; 
+
+}
