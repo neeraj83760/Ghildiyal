@@ -714,3 +714,63 @@ padding: 3rem;
     opacity:1; 
 
 }
+
+/* Blocks */
+
+.block{
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 2rem;
+    /* vertical padding and horizontal padding of 2 rem */
+    border: 2px solid red;
+    
+
+}
+
+.block__header{
+
+    text-align: center;
+}
+
+.block__heading{
+
+    margin-top: 0;
+}
+
+.block--dark{
+
+    background: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading{
+
+    color: #fff;
+}
+
+.block--skewed-right{
+
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+padding-bottom: calc(var(--padding-vertical) + 4rem);
+
+}
+
+.block--skewed-left{
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    
+    }
+
+
+    .container{
+
+        max-width: 1140px;
+        /* through this we want to constraint the content of the block not the
+           block itself
+        */
+
+        margin: 0 auto; 
+        /* 0 pixel for vertical margin and auto for horizontal margin, so if we have 
+           extra space it will be equally distributed to the sides of the block 
+        */
+    }
