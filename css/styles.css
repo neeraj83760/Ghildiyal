@@ -28,6 +28,10 @@ html{
      font-size: 62.5%;
 }
 
+img {
+    width: 100%;
+  }
+
 body{
 
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -47,7 +51,7 @@ h1,h2,h3{
 
 h1{
     /* 1 * font size of the HTML element */
-    font-size: 7rem; 
+    font-size: 6rem; 
     /* 70px = 7 rem and 40 px = 4rem , this is the magic of mentioning 62.5% of html element */
 }
 
@@ -56,10 +60,16 @@ h2{
 }
 
 h3{
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    /* margin-bottom: 2rem; */
+    line-height: 1.3;
 }
 
+p{
+
+    margin-top: 0;
+}
 @media screen and (min-width: 1024){
 
     body{
@@ -70,9 +80,13 @@ h3{
         font-size: 8rem;
     }
 
+    h2{
+        font-size: 4rem;
+    }
+
     h3{
         font-size: 2.4rem;
-        font-weight: 500;
+        /* font-weight: 500; */
     }
 }
 
@@ -234,6 +248,7 @@ a{
     /* coz inline elements don't change even mentioning width and height of the element */
     justify-content: center;
     align-items: center;
+    overflow: visible;
 }
 
 .icon-container--accent{
@@ -254,11 +269,21 @@ a{
     font-weight: 600;
     margin: 1rem 0;
     outline: 0; 
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
+    /* 4vw means 4% of the width of the viewport. more wider the
+    viewport more horizontal padding we will get 
+    */
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
      /* button shouldn't be wrap up with the text onto second line  */
+     /* margin-left: 2rem; */
+     /*  */
+}
+
+.get-started-btn{
+
+    margin-left: 2rem;
 }
 
 .btn .icon{
@@ -266,7 +291,8 @@ a{
     width:2rem;
     height: 2rem;
     margin-right: 1rem;
-    vertical-align: middle; 
+    vertical-align: middle;
+    /* margin-left: 2rem;  */
 }
 
 .btn--primary{
@@ -373,7 +399,8 @@ a{
 
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 2rem; 
+    padding: 1.5rem 2rem;
+    width:0; 
 }
 
 .input-group .btn{
@@ -674,6 +701,12 @@ padding: 3rem;
     color:#fff;
 }
 
+.callout-signup{
+
+    transform: translateY(5rem);
+
+}
+
 .callout__heading{
 
     color: #fff; 
@@ -766,7 +799,8 @@ padding: 3rem;
     padding: var(--padding-vertical) 2rem;
     /* vertical padding and horizontal padding of 2 rem */
     /* border: 2px solid red; */
-    
+    /* width: 0; */
+    /* height: 0; */
 
 }
 
@@ -779,6 +813,7 @@ padding: 3rem;
 .block__heading{
 
     margin-top: 0;
+    /* margin-left: 2rem; */
 }
 
 .block--dark{
@@ -798,16 +833,20 @@ padding: 3rem;
 
 .block--skewed-right{
 
-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 padding-bottom: calc(var(--padding-vertical) + 4rem);
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 
 }
 
 .block--skewed-left{
-
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     padding-bottom: calc(var(--padding-vertical) + 4rem);
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
     
+    }
+
+    .block--skewed-left, .block--skewed-right {
+        padding-bottom: calc(var(--padding-vertical) + 4rem);
     }
 
 
@@ -910,7 +949,8 @@ padding-bottom: calc(var(--padding-vertical) + 4rem);
         font-size: 2rem; 
         color: #b9c3cf;
         letter-spacing: 1px;
-        margin: 2rem 0 5rem;   
+        margin: 2rem 0 5rem;
+        /* margin-left: 2rem;    */
     }
 
     .hero__image{
@@ -922,7 +962,7 @@ padding-bottom: calc(var(--padding-vertical) + 4rem);
 
         .hero{
 
-            padding:0;
+            padding: 0;
         }
 
         .hero__content{
@@ -941,9 +981,9 @@ padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
     
 .block-domain__prices{
-
+  color: var(--color-heading); 
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -1035,7 +1075,8 @@ padding-bottom: calc(var(--padding-vertical) + 4rem);
 
 .footer{
 
-    background: #232323; 
+    background: #232323;
+    padding-top:10rem; 
 }
 
 .footer a{
@@ -1095,6 +1136,11 @@ padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 @media screen and (min-width: 768px){
+
+    .footer{
+
+        font-size: 1.5rem;
+    }
     .footer__sections{
 
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
